@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+
+body{
+    background-image: url(./Assets/skyline4.png) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+    backdrop-filter: blur(2px);
+    border: solid rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.1));
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: aliceblue;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative; /* Torna o link independente do efeito do fundo */
+    z-index: 1; /* Garante que o texto fique por cima do blur */
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1); /* Cor do fundo do nav */
+    z-index: 0;
+    filter: blur(20px); /* Aplica o blur somente ao fundo */
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+}
+
+.text1{
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    height: 260px;
+    width: 200px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    align-items: center;
+    color: aliceblue;
+    font-size: 12px;
+    text-align: justify;
+    padding: 4px;
+}
+
+.text2{
+    position: absolute;
+    top: 180px;
+    left: 176vh;
+    height: 260px;
+    width: 200px;
+    text-shadow: 30px black;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: justify;
+    padding: 4px;
+}
+
